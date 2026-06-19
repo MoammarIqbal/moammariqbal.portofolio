@@ -1,9 +1,9 @@
 export const experiences = [
   {
-    position: "Software Engineer Intern, Staff",
+    position: "Software Engineer",
     company: "TransferKu",
     period: "November 2025 - Sekarang",
-    type: "Internship, kemudian Staff mulai 1 Mei 2026",
+    type: "Staff",
     description: "Berperan dalam pengembangan sistem internal berbasis web dan mendukung kebutuhan integrasi sistem di lingkungan fintech/remitansi.",
     responsibilities: [
       "Mengembangkan sistem internal berbasis web",
