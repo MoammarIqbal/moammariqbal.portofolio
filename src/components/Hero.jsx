@@ -1,0 +1,44 @@
+import { profile } from '../data/profile';
+
+export default function Hero() {
+  return (
+    <section className="hero" id="hero">
+      <div className="container">
+        <div className="hero-content">
+          <h1 className="hero-name">{profile.name}</h1>
+          <p className="hero-role">{profile.role}</p>
+          <p className="hero-description">{profile.headline}</p>
+
+          <div className="hero-badges">
+            {profile.techBadges.map((tech) => (
+              <span key={tech} className="badge">{tech}</span>
+            ))}
+          </div>
+
+          <div className="hero-ctas">
+            <a href="#projects" className="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4"/></svg>
+              View Projects
+            </a>
+            <a href={profile.cv} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+            <a href="#contact" className="btn btn-ghost">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-image">
+          <img
+            src={profile.photo}
+            alt={`Foto profil ${profile.name}`}
+            width="280"
+            height="280"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
