@@ -1619,6 +1619,13 @@ ul, ol {
   .case-study-expandable {
     padding: 1.5rem;
   }
+  .featured-projects-grid,
+  .certs-grid-new {
+    grid-template-columns: 1fr;
+  }
+  .project-preview-overlay {
+    display: none !important;
+  }
 }
 
 

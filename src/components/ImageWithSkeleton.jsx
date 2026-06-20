@@ -14,9 +14,10 @@ export default function ImageWithSkeleton({ src, alt, className, imgClassName, .
         alt={alt}
         className={clsx(imgClassName, !loaded && "opacity-0")}
         onLoad={() => setLoaded(true)}
-        onError={() => setError(true)}
-        loading="lazy"
-        decoding="async"
+        onError={() => {
+          setError(true);
+          setLoaded(true); // Ensure opacity-0 is removed even on error so alt text shows
+        }}
         {...props}
       />
     </div>
