@@ -82,7 +82,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -310,6 +310,7 @@ ul, ol {
 
 /* --- Hero Section --- */
 .hero {
+  min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   align-items: center;
@@ -327,6 +328,7 @@ ul, ol {
   height: 70%;
   background: radial-gradient(ellipse, var(--color-accent-glow) 0%, transparent 70%);
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero .container {
@@ -391,6 +393,8 @@ ul, ol {
   border-radius: 50%;
   border: 3px solid var(--color-border-accent);
   box-shadow: 0 0 60px var(--color-accent-glow), var(--shadow-elevated);
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -412,6 +416,11 @@ ul, ol {
   .hero-image img {
     width: 200px;
     height: 200px;
+    box-shadow: 0 0 30px var(--color-accent-glow);
+  }
+
+  .hero::before {
+    display: none;
   }
 
   .hero-badges,

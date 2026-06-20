@@ -42,6 +42,8 @@ export default function Hero() {
             alt={`Foto profil ${p.name}`}
             width="280"
             height="280"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </div>

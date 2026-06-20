@@ -8,7 +8,7 @@ export default function ImageWithSkeleton({ src, alt, className, imgClassName, .
 
   return (
     <div className={clsx("image-with-skeleton", className)}>
-      {!loaded && !error && <Skeleton className="absolute inset-0 w-full h-full" />}
+      {!loaded && !error && <Skeleton style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} />}
       <img
         src={src}
         alt={alt}
