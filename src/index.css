@@ -398,6 +398,10 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-bottom: 4rem; /* Adds breathing space at the bottom */
+  }
+
   .hero .container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -423,8 +427,26 @@ ul, ol {
     display: none;
   }
 
-  .hero-badges,
+  .hero-badges {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
   .hero-ctas {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
     justify-content: center;
   }
 }
