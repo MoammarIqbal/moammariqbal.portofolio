@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { skillCategories } from '../data/skills';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -17,12 +19,16 @@ const itemVariants = {
 };
 
 export default function Skills() {
+  const { language } = useLanguage();
+  const t = translations[language].skills;
+  const categories = skillCategories[language];
+
   return (
     <section className="section" id="skills">
       <div className="container">
-        <h2 className="section-title">Tech Stack</h2>
+        <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">
-          Teknologi dan tools yang saya gunakan dalam pengembangan aplikasi web dan analisis data.
+          {t.subtitle}
         </p>
 
         <motion.div 
@@ -32,7 +38,7 @@ export default function Skills() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
         >
-          {skillCategories.map((category) => (
+          {categories.map((category) => (
             <motion.div key={category.title} className="skill-category" variants={itemVariants}>
               <h3 className="skill-category-title">{category.title}</h3>
               <div className="skill-tags">

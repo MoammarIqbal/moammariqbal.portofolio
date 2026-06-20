@@ -4,15 +4,21 @@ import { projects } from '../data/projects';
 import ProjectCard from './ProjectCard';
 import PreviewModal from './PreviewModal';
 import ImageWithSkeleton from './ImageWithSkeleton';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function Projects() {
   const [activeCase, setActiveCase] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
   const caseRef = useRef(null);
 
-  const featured = projects.filter((p) => p.featured);
-  const other = projects.filter((p) => !p.featured);
-  const activeProject = projects.find((p) => p.id === activeCase);
+  const { language } = useLanguage();
+  const t = translations[language].projects;
+  const pList = projects[language];
+
+  const featured = pList.filter((p) => p.featured);
+  const other = pList.filter((p) => !p.featured);
+  const activeProject = pList.find((p) => p.id === activeCase);
 
   const handleViewCase = (id) => {
     setActiveCase(activeCase === id ? null : id);
@@ -30,9 +36,9 @@ export default function Projects() {
   return (
     <section className="section section-alt" id="projects">
       <div className="container">
-        <h2 className="section-title">Proyek Unggulan</h2>
+        <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">
-          Studi kasus dan proyek utama yang telah saya kembangkan di lingkungan profesional maupun personal.
+          {t.subtitle}
         </p>
 
         <div className="featured-projects-grid">
@@ -53,7 +59,7 @@ export default function Projects() {
             viewport={{ once: true }}
             className="other-projects-wrap"
           >
-            <h3 className="section-title other-title">Project Lainnya</h3>
+            <h3 className="section-title other-title">{t.otherTitle}</h3>
             <div className="featured-projects-grid">
               {other.map((project) => (
                 <ProjectCard
@@ -90,34 +96,34 @@ export default function Projects() {
                   </div>
 
                   <div className="case-study-body">
-                    <h4>Problem</h4>
+                    <h4>{t.problem}</h4>
                     <p>{activeProject.problem}</p>
 
-                    <h4>Solution</h4>
+                    <h4>{t.solution}</h4>
                     <p>{activeProject.solution}</p>
 
-                    <h4>Fitur Utama</h4>
+                    <h4>{t.mainFeatures}</h4>
                     <ul>
                       {activeProject.features.map((f, i) => (
                         <li key={i}>{f}</li>
                       ))}
                     </ul>
 
-                    <h4>Highlight Teknis</h4>
+                    <h4>{t.techHighlights}</h4>
                     <ul>
                       {activeProject.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
                       ))}
                     </ul>
 
-                    <h4>Hasil dan Dampak</h4>
+                    <h4>{t.resultsImpact}</h4>
                     <ul>
                       {activeProject.results.map((r, i) => (
                         <li key={i}>{r}</li>
                       ))}
                     </ul>
 
-                    <h4>Tech Stack</h4>
+                    <h4>{t.techStack}</h4>
                     <div className="project-card-tags">
                       {activeProject.techStack.map((tech) => (
                         <span key={tech} className="badge badge-outline">{tech}</span>
@@ -133,7 +139,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                         >
                           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                          Live Demo
+                          {t.liveDemo}
                         </a>
                       )}
                       {activeProject.repoUrl && activeProject.repoUrl !== 'Private' ? (
@@ -143,15 +149,15 @@ export default function Projects() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          GitHub Repository
+                          {t.github}
                         </a>
                       ) : (
                         <span className="btn btn-secondary btn-disabled">
-                          Repository: Private
+                          {t.privateRepo}
                         </span>
                       )}
                       <button className="btn btn-ghost btn-close-case" onClick={() => setActiveCase(null)}>
-                        Tutup Detail
+                        {t.closeDetail}
                       </button>
                     </div>
                   </div>
@@ -173,7 +179,7 @@ export default function Projects() {
                       imgClassName="case-study-main-img"
                     />
                     <div className="case-study-preview-overlay">
-                       <span className="case-study-preview-text">Perbesar</span>
+                       <span className="case-study-preview-text">{t.zoom}</span>
                     </div>
                   </div>
 

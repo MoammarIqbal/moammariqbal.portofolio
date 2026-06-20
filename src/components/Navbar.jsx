@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react';
-
-const navItems = [
-  { label: 'Tentang', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Pengalaman', href: '#experience' },
-  { label: 'Sertifikasi', href: '#certifications' },
-  { label: 'Kontak', href: '#contact' },
-];
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
+import { MdLanguage } from 'react-icons/md';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language].nav;
+
+  const navItems = [
+    { label: t.about, href: '#about' },
+    { label: t.skills, href: '#skills' },
+    { label: t.projects, href: '#projects' },
+    { label: t.experience, href: '#experience' },
+    { label: t.certifications, href: '#certifications' },
+    { label: t.contact, href: '#contact' },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -36,16 +41,27 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button
-          className="nav-toggle"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isOpen}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="nav-actions">
+          <button 
+            onClick={toggleLanguage} 
+            className="lang-toggle-btn"
+            aria-label="Change language"
+          >
+            <MdLanguage size={18} />
+            <span>{language.toUpperCase()}</span>
+          </button>
+          
+          <button
+            className="nav-toggle"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </nav>
   );

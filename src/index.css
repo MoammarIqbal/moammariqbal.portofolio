@@ -72,7 +72,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -160,9 +160,10 @@ ul, ol {
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 68px;
+  min-height: 72px;
   display: flex;
   align-items: center;
+  padding: 0.5rem 0;
   background: rgba(11, 17, 33, 0.85);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -239,24 +240,61 @@ ul, ol {
   transition: var(--transition-base);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.lang-toggle-btn:hover {
+  border-color: var(--color-border-accent);
+  color: var(--color-accent);
+}
+
 /* Mobile nav */
 @media (max-width: 768px) {
   .nav-links {
-    position: fixed;
-    top: 68px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    background: rgba(11, 17, 33, 0.96);
-    backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 1.5rem 2rem 2rem;
     gap: 1rem;
-    transform: translateY(-110%);
-    transition: transform var(--transition-base);
-    border-bottom: 1px solid var(--color-border);
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all var(--transition-base);
+    z-index: -1;
   }
 
   .nav-links.active {
+    padding: 1.5rem 2rem 2rem;
+    background: rgba(11, 17, 33, 0.96);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
@@ -275,7 +313,7 @@ ul, ol {
   min-height: 100dvh;
   display: flex;
   align-items: center;
-  padding-top: 68px;
+  padding-top: 80px;
   position: relative;
   overflow: hidden;
 }

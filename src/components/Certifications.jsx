@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { certifications } from '../data/certifications';
 import PreviewModal from './PreviewModal';
 import ImageWithSkeleton from './ImageWithSkeleton';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 const categories = ["All", "Web Development", "Software Development", "Data & Analytics", "IT / Digital Talent", "Other Certifications"];
 
@@ -11,7 +13,11 @@ export default function Certifications() {
   const [showAll, setShowAll] = useState(false);
   const [selectedCert, setSelectedCert] = useState(null);
 
-  const filteredCerts = certifications.filter(cert => 
+  const { language } = useLanguage();
+  const t = translations[language].certifications;
+  const certList = certifications[language];
+
+  const filteredCerts = certList.filter(cert => 
     activeCategory === "All" ? true : cert.category === activeCategory
   );
 
@@ -20,9 +26,9 @@ export default function Certifications() {
   return (
     <section className="section section-alt" id="certifications">
       <div className="container">
-        <h2 className="section-title">Sertifikasi</h2>
+        <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">
-          Sertifikasi profesional dan pencapaian kompetisi yang dikelompokkan berdasarkan bidang kompetensi.
+          {t.subtitle}
         </p>
 
         <div className="category-tabs">
@@ -35,7 +41,7 @@ export default function Certifications() {
                 setShowAll(false);
               }}
             >
-              {cat}
+              {cat === "All" && language === 'id' ? 'Semua' : cat}
             </button>
           ))}
         </div>
@@ -75,7 +81,7 @@ export default function Certifications() {
                   <p className="cert-issuer-new">{cert.issuer}</p>
                   <p className="cert-desc-new">{cert.description}</p>
                   <button className="btn btn-secondary btn-full-width" onClick={(e) => { e.stopPropagation(); setSelectedCert(cert); }}>
-                    Lihat Sertifikat
+                    {language === 'id' ? 'Lihat Sertifikat' : 'View Certificate'}
                   </button>
                 </div>
               </motion.article>
@@ -89,7 +95,7 @@ export default function Certifications() {
               className="btn btn-secondary"
               onClick={() => setShowAll(true)}
             >
-              Tampilkan Semua ({filteredCerts.length})
+              {language === 'id' ? 'Tampilkan Semua' : 'Show All'} ({filteredCerts.length})
             </button>
           </div>
         )}
@@ -102,7 +108,7 @@ export default function Certifications() {
           imageSrc={selectedCert?.preview}
           imageAlt={selectedCert?.name}
           fileUrl={selectedCert?.file}
-          fileLabel="Buka File PDF Asli"
+          fileLabel={language === 'id' ? 'Buka File PDF Asli' : 'Open Original PDF File'}
         />
       </div>
     </section>

@@ -1,16 +1,22 @@
 import { experiences } from '../data/experiences';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function Experience() {
+  const { language } = useLanguage();
+  const t = translations[language].experience;
+  const expList = experiences[language];
+
   return (
     <section className="section" id="experience">
       <div className="container">
-        <h2 className="section-title">Pengalaman Kerja</h2>
+        <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">
-          Riwayat pengalaman profesional dalam pengembangan software dan pengelolaan data.
+          {t.subtitle}
         </p>
 
         <div className="timeline">
-          {experiences.map((exp, i) => (
+          {expList.map((exp, i) => (
             <div key={i} className="timeline-item">
               <h3 className="timeline-position">{exp.position}</h3>
               <p className="timeline-company">{exp.company}</p>

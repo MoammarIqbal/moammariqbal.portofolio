@@ -1,16 +1,19 @@
 import { profile } from '../data/profile';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function Contact() {
-  const { contact } = profile;
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+  const { contact } = profile[language];
 
   return (
     <section className="section contact-section" id="contact">
       <div className="container">
         <div className="contact-content">
-          <h2 className="section-title">Mari Berdiskusi</h2>
+          <h2 className="section-title">{t.title}</h2>
           <p className="contact-desc">
-            Tertarik untuk berkolaborasi atau memiliki pertanyaan terkait pengalaman dan project saya?
-            Silakan hubungi saya melalui channel berikut.
+            {t.subtitle}
           </p>
 
           <div className="contact-links">
