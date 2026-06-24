@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0.85 },
   visible: {
     opacity: 1,
     transition: {
@@ -14,7 +14,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0.85, y: 5 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
 };
 

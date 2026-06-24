@@ -56,7 +56,8 @@ export const translations = {
     },
     education: {
       title: 'Pendidikan Terakhir',
-      subtitle: 'Latar belakang pendidikan yang membentuk pola pikir analitis dan pemahaman proses bisnis.'
+      subtitle: 'Latar belakang pendidikan yang membentuk pola pikir analitis dan pemahaman proses bisnis.',
+      organizationsTitle: 'Organisasi & Pelatihan'
     },
     contact: {
       title: 'Mari Berdiskusi',
@@ -127,7 +128,8 @@ export const translations = {
     },
     education: {
       title: 'Education',
-      subtitle: 'Educational background that shaped my analytical thinking and understanding of business processes.'
+      subtitle: 'Educational background that shaped my analytical thinking and understanding of business processes.',
+      organizationsTitle: 'Organizations & Training'
     },
     contact: {
       title: 'Let\'s Discuss',

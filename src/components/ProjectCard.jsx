@@ -6,7 +6,7 @@ export default function ProjectCard({ project, onViewCase, onImageClick }) {
   return (
     <motion.article 
       className="project-card"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0.85, y: 5 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.5 }}

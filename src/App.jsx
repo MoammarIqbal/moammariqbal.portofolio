@@ -29,8 +29,11 @@ export default function App() {
     );
 
     // Observe all section containers
+    // Hidden state is applied via JS so crawlers see content by default
     const sections = document.querySelectorAll('.section, .quick-stats');
     sections.forEach((section) => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(24px)';
       section.classList.add('reveal');
       observer.observe(section);
     });

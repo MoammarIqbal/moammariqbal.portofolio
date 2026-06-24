@@ -1,0 +1,76 @@
+# Moammar Iqbal Portfolio
+
+> Moammar Iqbal is a Software Developer and Fullstack Web Developer based in Cirebon, West Java, Indonesia.
+
+## About
+
+Moammar Iqbal is a Fullstack Web Developer focused on developing scalable web applications, fintech systems, API integrations, and data-driven internal tools using Laravel, React, and MySQL. He currently works as a Software Engineer at TransferKu, a digital remittance company, and previously interned at Diskominfo Kabupaten Cirebon as a Fullstack Web Developer & Data Intern.
+
+His background in Computerized Accounting (STMIK IKMI Cirebon) helps him understand business needs, transaction recording, reporting, and data processing.
+
+## Website
+
+- Portfolio: https://moammariqbal-portofolio.vercel.app/
+- GitHub: https://github.com/MoammarIqbal
+- LinkedIn: https://www.linkedin.com/in/moammar-iqbal-388969376
+
+## Core Skills
+
+- Laravel (PHP framework)
+- React (JavaScript library)
+- MySQL (relational database)
+- REST API development and integration
+- JavaScript / jQuery
+- Tailwind CSS
+- Python
+- Data Mining & Machine Learning
+- Data Visualization & Dashboard Development
+
+## Featured Projects
+
+### AML Monitoring System
+A fullstack transaction monitoring system for Anti-Money Laundering, fraud prevention, and counter-terrorism financing at TransferKu. Built with Laravel, React, MySQL, and REST API.
+- URL: https://aml-dash.transferku.id/
+
+### TransferKu
+A digital remittance system for international and domestic transfers supporting B2B, B2C, C2B, and C2C transactions. Built with Laravel, MySQL, and REST API.
+- URL: https://dashboard.transferku.id/
+
+### AI-Powered Accounting Journal
+An AI-integrated accounting journal system that helps non-accountants record transactions using natural language, processing them into journals up to trial balance. Built with Laravel, MySQL, and AI (LLaMA 4).
+- URL: https://ai-powered-accounting-journal.freedev.app/
+- Source: https://github.com/MoammarIqbal/AI-Powered-Accounting-Journal
+
+### TransferKu Documentation
+A React-based documentation website for partners to integrate TransferKu's API.
+- URL: https://docs.transferku.id/
+
+### Letter Archive System
+A web application for managing company letters with automated letter number generation at TransferKu. Built with Laravel and MySQL.
+
+## Work Experience
+
+### Software Engineer — TransferKu (November 2025 - Present)
+Developing web-based internal systems, building and integrating APIs for real-time data synchronization, performing transaction validation and monitoring.
+
+### Fullstack Web Developer & Data Intern — Diskominfo Kabupaten Cirebon (March 2025 - June 2025)
+Developed a web-based village data recording and management system, processed data into reports and visualizations.
+
+## Education
+
+- STMIK IKMI Cirebon — Computerized Accounting (2023 - 2026)
+
+## Certifications
+
+- Junior Web Developer Competency Certificate (BNSP)
+- Junior Web Developer Training Certificate - VSGA (Kementerian Kominfo)
+- 3rd Runner Up - National Data Festival (APTIKOM)
+- CPA: Programming Essentials in C++ (Cisco)
+- Database Programming with SQL & PL/SQL (Oracle Academy)
+- PCAP: Programming Essentials in Python (Cisco)
+
+## Contact
+
+- Email: ikbal30042005@gmail.com
+- WhatsApp: https://wa.me/6289633413511
+- Location: Cirebon, Jawa Barat, Indonesia

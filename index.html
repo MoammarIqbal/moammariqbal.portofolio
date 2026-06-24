@@ -11,42 +11,160 @@
     <meta name="keywords" content="Moammar Iqbal, Software Developer, Fullstack Web Developer, Laravel Developer, React Developer, Web Developer Indonesia, API Integration, MySQL, Fintech Developer">
     <meta name="author" content="Moammar Iqbal">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://moammariqbal-portofolio.vercel.app/">
+    <meta name="theme-color" content="#0b1121">
 
     <meta name="google-site-verification" content="google7a55ed9fb172655d" />
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Moammar Iqbal - Software Developer Portfolio">
-    <meta property="og:description" content="Fullstack Web Developer focused on Laravel, React, API Integration, fintech systems, and data-driven web applications.">
+    <meta property="og:title" content="Moammar Iqbal - Software Developer & Fullstack Web Developer">
+    <meta property="og:description" content="Portfolio Moammar Iqbal, Software Developer dan Fullstack Web Developer. Berfokus pada Laravel, React, API Integration, fintech systems, dan data-driven web applications.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/og-image.png">
+    <meta property="og:url" content="https://moammariqbal-portofolio.vercel.app/">
+    <meta property="og:image" content="https://moammariqbal-portofolio.vercel.app/og-image.png">
+    <meta property="og:site_name" content="Moammar Iqbal Portfolio">
+    <meta property="og:locale" content="id_ID">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Moammar Iqbal - Software Developer Portfolio">
-    <meta name="twitter:description" content="Fullstack Web Developer focused on Laravel, React, API Integration, fintech systems, and data-driven web applications.">
-    <meta name="twitter:image" content="/og-image.png">
+    <meta name="twitter:title" content="Moammar Iqbal - Software Developer & Fullstack Web Developer">
+    <meta name="twitter:description" content="Portfolio Moammar Iqbal, Software Developer dan Fullstack Web Developer. Berfokus pada Laravel, React, API Integration, fintech systems, dan data-driven web applications.">
+    <meta name="twitter:image" content="https://moammariqbal-portofolio.vercel.app/og-image.png">
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Moammar Iqbal",
-      "jobTitle": "Software Developer / Fullstack Web Developer",
-      "email": "mailto:ikbal30042005@gmail.com",
-      "telephone": "+6289633413511",
-      "url": "",
-      "sameAs": [
-        "https://github.com/MoammarIqbal",
-        "https://www.linkedin.com/in/moammar-iqbal-388969376"
-      ],
-      "knowsAbout": [
-        "Laravel",
-        "React",
-        "MySQL",
-        "REST API",
-        "Fullstack Web Development",
-        "Fintech Systems",
-        "Data Visualization"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://moammariqbal-portofolio.vercel.app/#website",
+          "name": "Moammar Iqbal Portfolio",
+          "url": "https://moammariqbal-portofolio.vercel.app/",
+          "description": "Portfolio website of Moammar Iqbal, Software Developer and Fullstack Web Developer.",
+          "inLanguage": ["id", "en"]
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://moammariqbal-portofolio.vercel.app/#profilepage",
+          "name": "Moammar Iqbal - Software Developer Portfolio",
+          "url": "https://moammariqbal-portofolio.vercel.app/",
+          "description": "Portfolio Moammar Iqbal, Software Developer dan Fullstack Web Developer dengan pengalaman Laravel, React, API Integration, MySQL, fintech systems, internal tools, dan data-driven web applications.",
+          "mainEntity": { "@id": "https://moammariqbal-portofolio.vercel.app/#person" },
+          "isPartOf": { "@id": "https://moammariqbal-portofolio.vercel.app/#website" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://moammariqbal-portofolio.vercel.app/#person",
+          "name": "Moammar Iqbal",
+          "jobTitle": "Software Developer / Fullstack Web Developer",
+          "description": "Software Developer yang berfokus pada pengembangan aplikasi web scalable, sistem fintech, integrasi API, dan internal tools berbasis data menggunakan Laravel, React, dan MySQL.",
+          "email": "mailto:ikbal30042005@gmail.com",
+          "telephone": "+6289633413511",
+          "url": "https://moammariqbal-portofolio.vercel.app/",
+          "image": "https://moammariqbal-portofolio.vercel.app/assets/images/pas-foto.jpeg",
+          "sameAs": [
+            "https://github.com/MoammarIqbal",
+            "https://www.linkedin.com/in/moammar-iqbal-388969376"
+          ],
+          "knowsAbout": [
+            "Laravel",
+            "React",
+            "MySQL",
+            "REST API",
+            "Fullstack Web Development",
+            "Fintech Systems",
+            "Data Visualization",
+            "JavaScript",
+            "PHP",
+            "Tailwind CSS",
+            "Python",
+            "Data Mining",
+            "Machine Learning"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "TransferKu",
+            "url": "https://transferku.id/"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "STMIK IKMI Cirebon"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cirebon",
+            "addressRegion": "Jawa Barat",
+            "addressCountry": "ID"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://moammariqbal-portofolio.vercel.app/#projects",
+          "name": "Featured Projects",
+          "description": "Proyek unggulan yang dikembangkan oleh Moammar Iqbal.",
+          "numberOfItems": 3,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "AML Monitoring System",
+                "description": "Sistem monitoring transaksi fullstack untuk kebutuhan Anti-Money Laundering, fraud prevention, pencegahan pendanaan terorisme, dan risiko terkait senjata pemusnah massal.",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web",
+                "url": "https://aml-dash.transferku.id/",
+                "image": "https://moammariqbal-portofolio.vercel.app/assets/images/dasbor-aml.png",
+                "creator": { "@id": "https://moammariqbal-portofolio.vercel.app/#person" },
+                "programmingLanguage": ["Laravel", "React", "MySQL", "REST API", "JavaScript"]
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "TransferKu",
+                "description": "Sistem remitansi digital untuk transfer internasional dan domestik dengan dukungan transaksi B2B, B2C, C2B, dan C2C.",
+                "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Web",
+                "url": "https://dashboard.transferku.id/",
+                "image": "https://moammariqbal-portofolio.vercel.app/assets/images/dasbor-transferku.png",
+                "creator": { "@id": "https://moammariqbal-portofolio.vercel.app/#person" },
+                "programmingLanguage": ["Laravel", "MySQL", "jQuery", "REST API"]
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "AI-Powered Accounting Journal",
+                "description": "Sistem penjurnalan akuntansi terintegrasi AI yang membantu pengguna non-akuntan mencatat transaksi menggunakan bahasa natural, kemudian mengolahnya menjadi jurnal hingga laporan neraca saldo.",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web",
+                "url": "https://ai-powered-accounting-journal.freedev.app/",
+                "image": "https://moammariqbal-portofolio.vercel.app/assets/images/landingpage-akuntansi-nlp.png",
+                "creator": { "@id": "https://moammariqbal-portofolio.vercel.app/#person" },
+                "codeRepository": "https://github.com/MoammarIqbal/AI-Powered-Accounting-Journal",
+                "programmingLanguage": ["Laravel", "MySQL", "AI / LLaMA 4"]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://moammariqbal-portofolio.vercel.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://moammariqbal-portofolio.vercel.app/"
+            }
+          ]
+        }
       ]
     }
     </script>
@@ -58,5 +176,32 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Noscript fallback: critical SEO content for crawlers without JS -->
+    <noscript>
+      <div style="padding:2rem;max-width:800px;margin:0 auto;font-family:system-ui,sans-serif;color:#f1f5f9;background:#0b1121;">
+        <h1>Moammar Iqbal - Software Developer & Fullstack Web Developer</h1>
+        <p>Software Developer yang berfokus pada pengembangan aplikasi web scalable, sistem fintech, integrasi API, dan internal tools berbasis data menggunakan Laravel, React, dan MySQL.</p>
+
+        <h2>Keahlian Utama</h2>
+        <p>Laravel, React, MySQL, REST API, JavaScript, PHP, Tailwind CSS, Python, Data Mining, Machine Learning, Data Visualization</p>
+
+        <h2>Pengalaman</h2>
+        <p><strong>Software Engineer</strong> di TransferKu (November 2025 - Sekarang)</p>
+        <p><strong>Fullstack Web Developer & Data Intern</strong> di Diskominfo Kabupaten Cirebon (Maret 2025 - Juni 2025)</p>
+
+        <h2>Proyek Unggulan</h2>
+        <ul>
+          <li><strong>AML Monitoring System</strong> — Sistem monitoring transaksi untuk Anti-Money Laundering dan fraud prevention (Laravel, React, MySQL)</li>
+          <li><strong>TransferKu</strong> — Sistem remitansi digital untuk transfer internasional dan domestik (Laravel, MySQL, REST API)</li>
+          <li><strong>AI-Powered Accounting Journal</strong> — Sistem penjurnalan akuntansi berbasis AI dengan input bahasa natural (Laravel, MySQL, LLaMA 4)</li>
+        </ul>
+
+        <h2>Kontak</h2>
+        <p>Email: <a href="mailto:ikbal30042005@gmail.com">ikbal30042005@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/MoammarIqbal">github.com/MoammarIqbal</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/moammar-iqbal-388969376">linkedin.com/in/moammar-iqbal-388969376</a></p>
+      </div>
+    </noscript>
   </body>
 </html>
